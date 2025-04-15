@@ -10,6 +10,6 @@ source=driver.find_element(By.XPATH,"//p[text()='Drag me to my target']")
 destination=driver.find_element(By.XPATH,"//p[text()='Drop here']")
 
 act= ActionChains(driver)
-#act.drag_and_drop(source,destination).perform()
+act.drag_and_drop(source,destination).perform()
 act.move_to_element(source).click_and_hold().move_to_element(destination).release().perform()
 time.sleep(5)
